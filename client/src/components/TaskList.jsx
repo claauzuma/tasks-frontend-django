@@ -8,8 +8,11 @@ function TaskList() {
   useEffect(() => {
     async function loadTasks() {
       try {
-        const res = await getAllTasks();
-        setTasks(res.data);
+        const res = await getAllTasks(); 
+        console.log("Traimos la data ")
+        console.log(res) 
+        setTasks(res); 
+        console.log(tasks)
       } catch (error) {
         console.error("Error fetching tasks:", error);
       }
@@ -17,15 +20,17 @@ function TaskList() {
     loadTasks();
   }, []);
 
+
+
   return (
     <div className='grid grid-cols-3 gap-3'>
-
+     
       {tasks.length > 0 ? (
         tasks.map(task => (
           <TaskCard key={task.id} task={task} />
         ))
       ) : (
-        <p>No tasks available</p> // Puedes mostrar un mensaje si no hay tareas
+        <p>No tasks available</p> 
       )}
     </div>
   );

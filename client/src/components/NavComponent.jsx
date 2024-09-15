@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 function NavComponent() {
   return (
     <div className='flex justify-between py-3'>
-      {/* Enlace de "Volver" */}
       <Link to="/tasks">Volver</Link>
 
 

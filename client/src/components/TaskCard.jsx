@@ -9,6 +9,8 @@ function TaskCard( {task} ) {
 
     <div className='bg-zinc-800 p-3 hover:bg-zinc-700 hover:cursor-pointer'
     onClick={()=> {
+      console.log("El params id es " + task.id)
+      console.log("Ahora navegamos al id " + task.id)
      navigate('/tasks/' + task.id)
 
     }}

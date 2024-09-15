@@ -14,6 +14,7 @@ function App() {
     <div className='container mx-auto'>
     <NavComponent/>
     <Routes>
+      
       <Route path='/' element={<Navigate to="/tasks"/>}  />
      <Route path="/tasks" element={<TaskPage/>} />
      <Route path="/tasks-create" element={<TaskFormPage/>} />
